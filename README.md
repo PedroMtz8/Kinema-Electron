@@ -1,10 +1,17 @@
 # Steps to create the desktop app
 
 ### Install dependencies
-npm install
+
+```
+ npm install
+```
 
 ### Run command builder
-npm run build-installer
+
+```
+ npm run build-installer
+```
+
 
 This will create a dist folder with the .exe file installer inside
 
