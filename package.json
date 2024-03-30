@@ -1,0 +1,38 @@
+{
+  "name": "kinema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder",
+    "build-installer": "electron-builder",
+    "build:packager:": "electron-packager ./ --platform=win32 --arch=x64 dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.6",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kinema.app",
+    "productName": "KINEMÁ",
+    "win": {
+      "target": ["nsis"],
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "public/icon.ico",
+      "uninstallerIcon": "public/icon.ico",
+      "uninstallDisplayName": "KINEMÁ",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "os-utils": "^0.0.14"
+  }
+}
