@@ -1,12 +1,10 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
-const os = require('os-utils')
+// const os = require('os-utils')
 
 const createWindow = () => {
 
 const url = "https://kinema-ms.vercel.app"
-
-console.log('HOLA?', __dirname + '/icon.ico')
 
   const win = new BrowserWindow({
     width: 1200,
@@ -18,11 +16,11 @@ console.log('HOLA?', __dirname + '/icon.ico')
   })
   win.loadURL(url)
 
-  os.cpuUsage((v) => {
-    console.log('CPU Usage (%): ', v*100)
-    console.log('Mem Usage (%): ', os.freememPercentage()*100)
-    console.log('Total Usage (GB): ', os.totalmem()/1024)
-  })
+  // os.cpuUsage((v) => {
+  //   console.log('CPU Usage (%): ', v*100)
+  //   console.log('Mem Usage (%): ', os.freememPercentage()*100)
+  //   console.log('Total Usage (GB): ', os.totalmem()/1024)
+  // })
 
   // win.loadFile('index.html')
 }
